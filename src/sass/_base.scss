@@ -1,0 +1,35 @@
+.pre-title {
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #ffa5ba;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.title {
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.14;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    letter-spacing: 0.06em;
+  }
+}
