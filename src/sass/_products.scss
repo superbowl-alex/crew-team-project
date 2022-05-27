@@ -1,5 +1,4 @@
 .products {
-  box-sizing: border-box;
   padding-top: 80px;
 }
 
@@ -97,11 +96,16 @@
   color: var(--light-txt-color);
   margin-top: 0;
   margin-bottom: 32px;
-}
-.products-list__dots {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 32px;
+  &::after {
+    content: '';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    width: 26px;
+    height: 6px;
+    background-image: url(../images/icon-dots.svg);
+  }
 }
 .products-list__text {
   font-weight: 700;
