@@ -1,0 +1,20 @@
+.modal.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal_title {
+  @extend .title;
+
+  font-size: 15px;
+}
+
+.modal_sub-title {
+  @extend .pre-title;
+  font-size: 10px;
+}
+
+.signup-form_item {
+  display: block;
+  margin-bottom: 10px;
+}

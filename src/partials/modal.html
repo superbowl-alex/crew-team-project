@@ -1,25 +1,58 @@
-<div class="modal">
-  <button type="button"></button>
-  <p>headline</p>
-  <p>visit nearby store to retrive your order</p>
+<button type="button" data-modal-open data-modal-close>модалка</button>
+<div class="modal is-hidden" data-modal>
+  <p class="modal_title">Your life's gonna be sweet!</p>
+  <p class="modal_sub-title">visit nearby store to retrive your order</p>
   <form name="signup-form" autocomplete="off">
-    <label class="signup-form_field">
-      <span>Your name</span>
-      <input type="text" name="name" autofocus placeholder="Chuck Rassel" />
-    </label>
-    <label class="signup-form_field">
-      <span>Your email adress</span>
-      <input type="email" name="email" placeholder="adress@mail.com" />
-    </label>
-    <label>
-      <input type="checkbox" name="products" value="ice cream" />
-    </label>
-    <label>
-      <input type="checkbox" name="products" value="ice coffee" />
-    </label>
-    <label>
-      <input type="checkbox" name="products" value="milkshake" />
-    </label>
-    <button type="submit"></button>
+    <div class="signup-form_item">
+      <label class="signup-form_label">
+        <span class="signup-form_title">Your name</span>
+        <input
+          class="signup-form_input"
+          type="text"
+          name="name"
+          autofocus
+          placeholder="Chuck Rassel"
+        />
+      </label>
+    </div>
+    <div class="signup-form_item">
+      <label class="signup-form_label">
+        <span class="signup-form_title">Your email adress</span>
+        <input
+          class="signup-form_input"
+          type="email"
+          name="email"
+          placeholder="adress@mail.com"
+        />
+      </label>
+    </div>
+    <div class="signup-form_item">
+      <label class="signup-form_label">
+        <input type="checkbox" name="products" value="ice-cream" />
+        <span class="signup-form_title">Ice cream</span>
+      </label>
+      <label class="signup-form_label">
+        <input type="number" name="ice-cream-amount" value="1" max="10" />
+      </label>
+    </div>
+    <div class="signup-form_item">
+      <label class="signup-form_label">
+        <input type="checkbox" name="products" value="ice coffee" />
+        <span class="signup-form_title">Ice coffee</span>
+      </label>
+      <label class="signup-form_label">
+        <input type="number" name="ice-coffee-amount" value="1" max="10" />
+      </label>
+    </div>
+    <div class="signup-form_item">
+      <label class="signup-form_label">
+        <input type="checkbox" name="products" value="milkshake" />
+        <span class="signup-form_title">Milkshake</span>
+      </label>
+      <label class="signup-form_label">
+        <input type="number" name="milkshake-amount" value="1" max="10" />
+      </label>
+    </div>
+    <button type="submit">Buy</button>
   </form>
 </div>
