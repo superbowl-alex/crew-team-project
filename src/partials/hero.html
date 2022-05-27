@@ -1,20 +1,28 @@
-<section class="hero section">
-    <div class="container">
-        <h1 class="hero__title">ice cream made with <span class="hero__accent">passion</span></h1>
+<section class="hero">
+    <div class="hero__container container">
+        <div class="title__thumb">
+            <h1 class="hero__title">ice cream made with <span class="hero__accent">passion</span></h1>
+              <ul class="hero__list list">
+                <li class="hero__item">
+                    <a href="#" class="hero__link link">Products</a>
+                </li>
+                <li class="hero__item">
+                    <a href="#" class="hero__link link">How it&#39;s made?</a>
+                </li>
+            </ul>
+        </div>
         <p class="hero__text"><span class="hero__text hero__text--accent">16</span>cafes</p>
         <p class="hero__text"><span class="hero__text hero__text--accent">23</span>food trucks</p>
-        <a href="#" class="hero__link link">Products</a>
-        <a href="#" class="hero__link link">How it&#39;s made?</a>
         <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
         <button class="hero__button" type="button">
             <svg>
-                <use href=""> dfsvsdvsdv</use>
+                <use href="#"></use>
             </svg>
 
         </button>
 
         <!-- Accent-picture -->
-        <picture>
+        <picture class="hero__picture hero__picture--primary">
             <!-- Desktop -->
             <source srcset="./images/hero-ice-cream-desktop.png        1x,
                             ./images/hero-ice-cream-desktop@2x.png     2x"
@@ -34,7 +42,7 @@
         </picture>
 
         <!-- Secondary-picture MILK -->
-        <picture>
+        <picture class="hero__picture hero__picture--secondary">
             <!-- Desktop -->
             <source srcset="./images/hero-milk-desktop.png        1x,
                             ./images/hero-milk-desktop@2x.png     2x" 
@@ -51,7 +59,7 @@
         </picture>
 
         <!-- Secondary-picture GIRL -->
-        <picture>
+        <picture class="hero__picture hero__picture--secondary">
             <!-- Desktop -->
             <source srcset="./images/hero-girl-desktop.png        1x,
                             ./images/hero-girl-desktop@2x.png    2x" 
@@ -63,7 +71,8 @@
                             media="(min-width: 768px)"
                             type="image/png" />
 
-            <img class="hero__image" src="./images/hero-girl-tablet.png" alt="girl photo">
+            <img class="hero__image" src="./images/hero-girl-tablet.png" alt="girl with ice-cream photo">
         </picture>
+        <div class="circle"></div>
     </div>
 </section>
