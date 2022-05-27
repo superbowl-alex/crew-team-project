@@ -1,6 +1,6 @@
 .pre-title {
   font-size: 18px;
-  line-height: 1.16;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -26,10 +26,11 @@
   color: #d41443;
   @media screen and (min-width: 768px) {
     font-size: 48px;
-    line-height: 1.14;
+    line-height: 1.15;
   }
   @media screen and (min-width: 1200px) {
     font-size: 58px;
     letter-spacing: 0.06em;
+    line-height: 1.14;
   }
 }
