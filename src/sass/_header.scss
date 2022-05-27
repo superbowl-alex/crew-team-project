@@ -5,7 +5,16 @@
 
     padding-top: 8px;
     background-color: transparent;
-    // background-color: var(--accent-background-color);
+    
+}
+
+.js-header-scroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    padding-top: 8px;
+    background-color: var(--accent-background-color);
 }
 
 .header__nav {
@@ -36,7 +45,7 @@
     display: block;
     width: 20px;
     transform: rotate(180deg);
-    border-bottom: 1px solid #D41443;  
+    border-bottom: 1px solid var(--accent-title-color);  
 }
 
 .header__button-line--middle {
