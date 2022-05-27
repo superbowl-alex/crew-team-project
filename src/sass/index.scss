@@ -8,7 +8,10 @@
 
 // ---------------------------------------
 @import './common';
-@import './example';
+@import './utils/vars';
+@import './utils/base';
+@import './section';
+@import './container';
 @import './header';
 @import './hero';
 @import './products';
