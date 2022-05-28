@@ -2,3 +2,10 @@
    margin-left: auto;
    margin-right: auto;
 }
+.gallery{
+   background: linear-gradient(
+    to bottom,
+    var(--secondary-light-background) 70%,
+    #ffff 30%
+  );
+}
