@@ -19,10 +19,62 @@ img {
   display: block;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
+// Mixin
+@mixin mq($screen) {
+  $mobile-small: 320px;
+  $mobile: 480px;
+  $tablet: 768px;
+  $desktop: 1200px;
+
+  @if $screen == mobile-only {
+    @media screen and (max-width:#{$tablet - 1}) {
+      @content;
+    }
+  } @else if $screen == mobile-small {
+    @media screen and (max-width: #{$mobile - 1}) {
+      @content;
+    }
+  } @else if $screen == mobile {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  } @else if $screen == tablet-only {
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1}) {
+      @content;
+    }
+  } @else if $screen == tablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $screen == desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $screen == retina {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-moz-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+}
+
 // General styles
 .hero__container {
   position: relative;
   min-height: 502px;
+
+  @include mq(tablet) {
+    min-height: 416px;
+  }
 }
 
 .title__thumb {
@@ -31,6 +83,12 @@ img {
   top: 194px;
   z-index: 3;
   max-width: 218px;
+
+  @include mq(tablet) {
+    max-width: 162px;
+    top: 102px;
+    left: 32px;
+  }
 }
 
 .hero__title {
@@ -43,6 +101,10 @@ img {
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @include mq(tablet) {
+    font-size: 22px;
+  }
 }
 
 .hero__accent {
@@ -54,6 +116,10 @@ img {
   line-height: 0.965;
   text-transform: uppercase;
   letter-spacing: 0.01em;
+
+  @include mq(tablet) {
+    font-size: 34px;
+  }
 }
 
 .hero__list {
@@ -65,7 +131,6 @@ img {
 }
 
 .hero__link {
-  min-width: 63px;
   min-height: 24px;
   border-radius: 20px;
   display: inline-flex;
@@ -99,10 +164,69 @@ img {
 
 .hero__text {
   display: none;
+  font-size: 8px;
+  text-align: center;
+  line-height: 1.14;
+
+  @include mq(tablet) {
+    display: block;
+    font-size: 8px;
+    color: var(--light-txt-color);
+  }
+}
+
+.hero__text--accent {
+  position: relative;
+  z-index: 5;
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--title-color);
+  text-align: center;
+}
+
+.hero__text--about {
+  line-height: 1.5;
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+.text__thumb--lg {
+  width: 114px;
+  position: absolute;
+  left: 184px;
+  bottom: 56px;
+  z-index: 3;
+}
+
+.text__thumb--sm {
+  display: inline-block;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.text__container {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  right: 32px;
+  top: 92px;
 }
 
 .hero__button {
   display: none;
+
+  @include mq(tablet) {
+    display: block;
+    border: transparent;
+    outline: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
 }
 
 .hero__picture--primary {
@@ -110,10 +234,33 @@ img {
   z-index: 2;
   bottom: 0;
   right: 10%;
+
+  @include mq(tablet) {
+    right: 39%;
+  }
 }
 
-.hero__picture--secondary {
+.hero__picture--girl {
   display: none;
+
+  @include mq(tablet) {
+    display: block;
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+
+.hero__picture--milk {
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+    position: absolute;
+    left: 32px;
+    bottom: 16px;
+  }
 }
 
 .circle {
@@ -125,4 +272,22 @@ img {
   border-radius: 50%;
 
   background-color: var(--accent-title-color);
+
+  @include mq(tablet) {
+    width: 335px;
+    height: 333px;
+    right: 24%;
+    bottom: 40px;
+  }
+}
+
+.circle--sm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  background-color: var(--light-txt-color);
 }
