@@ -79,9 +79,9 @@
             border-radius: 22px;
 
             transform: scale(1);
-            transition: color 250ms ease,
-                        background-color 250ms ease,
-                        transform 250ms ease;
+            transition: background-color 300ms ease,
+                        transform 250ms ease,
+                        font-size 250ms ease;
         }
     }
 
@@ -91,15 +91,15 @@
     }
 
     &__buy-button:hover {
-        background-color: var(--title-color);
-        color: #ffffff;
-        transform: scale(1.002);
+        background-color: #ECEBEB;
+        transform: scale(102%);
+        font-size: 16.5px;
 
-        box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
+        box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.25);
     }
 
     &__buy-button:hover &__btn-icon {
-        display: none;
+        width: 9px;
     }
 }
 
