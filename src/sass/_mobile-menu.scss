@@ -9,10 +9,9 @@
     margin: 0;
 }
 .mobile-menu{
-    box-sizing: border-box;
     position: fixed;
     top: 0;
-    background-color: #E17992;
+    background-color: var(--dark-menu-background);
     height: 100vh;
     width: 100vw;
     padding-top: 20px;
@@ -44,36 +43,35 @@
     
 }
 .menu-cloce{
-    fill: white;
+    fill: var(--light-txt-color);
 }
 .mobile-menu-list{
     margin-top: 27px;
     margin-bottom: 0;
 }
 .mobile-menu-link{
-    
-    font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--light-txt-color);
         
-        padding-left: 20px;
-        border-top: 1px solid #E18298;
-        border-bottom: 1px solid #E18298;
-        width: 100%;
-        padding-bottom: 11px;
-        padding-top: 13px;
+    padding-left: 20px;
+    border-top: 1px solid var(--dark-menu-border);
+    border-bottom: 1px solid var(--dark-menu-border);
+    width: 100%;
+    padding-bottom: 11px;
+    padding-top: 13px;
         &:hover,
         &:focus{
             color: var(--title-color);
         }
 }
 .mobile-btn{
+    font-family: 'DM Sans';
+    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
@@ -81,8 +79,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    color: #D41443;
-    background: #FFFFFF;
+    color: var(--title-color);
+    background: var(--light-txt-color);
     border-radius: 22px;
     width: 209px;
     height: 44px;
