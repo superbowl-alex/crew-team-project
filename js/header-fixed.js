@@ -8,7 +8,5 @@ function makeHeaderFixed() {
     } else {
         headerEL.classList.add("header")
         headerEL.classList.remove("js-header-scroll");
-
-        console.log(window.scrollY)
     }
 }
