@@ -4,10 +4,10 @@
             <h1 class="hero__title">ice cream made with <span class="hero__accent">passion</span></h1>
               <ul class="hero__list list">
                 <li class="hero__item">
-                    <a href="#" class="hero__link link">Products</a>
+                    <a href="#products" class="hero__link link">Products</a>
                 </li>
                 <li class="hero__item">
-                    <a href="#" class="hero__link link">How it&#39;s made?</a>
+                    <a href="#about" class="hero__link link">How it&#39;s made?</a>
                 </li>
             </ul>
         </div>
@@ -86,3 +86,14 @@
         <div class="circle"></div>
     </div>
 </section>
+<script>
+    $(document).ready(function () {
+                $("#menu").on("click", "a", function (event) {
+                event.preventDefault();
+                var id = $(this).attr('href'),
+                top = $(id).offset().top;
+                $('body,html').animate({ scrollTop: top }, 1500);
+                });
+            
+        });
+</script>
