@@ -68,9 +68,22 @@
     line-height: 1.94;
   }
 }
-.about--btn {
+.about__btn {
+  position: relative;
   margin-top: 20px;
+  padding: 0 56px 0 37px;
+  border: none;
+  justify-content: left;
   @media screen and (min-width: 768px) {
     margin-top: 40px;
   }
+  &:hover,
+  &:focus {
+    background-color: var(--hover-button-background);
+  }
+}
+.about__icon {
+  position: absolute;
+  left: 134px;
+  fill: var(--title-color);
 }
