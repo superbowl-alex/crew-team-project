@@ -1,0 +1,128 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    padding-top: 8px;
+    background-color: transparent;  
+
+    z-index: 999;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-kink {
+        display: block;
+    }
+
+    &__logo {
+        background-color: transparent;
+    }
+
+    &__button {
+        height: 20px;
+        text-align: center;
+
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media screen and (min-width: 768px){
+            margin-right: 32px;
+            margin-left: auto;
+        }
+    }
+
+    &__button:hover &__button-line {
+        transform: scale(1.25);
+    }
+
+    &__button-line {
+        display: block;
+        width: 20px;
+
+        border: 1px solid #D41443; 
+        background-color: #D41443;
+
+        transform: scale(1);
+        transition: transform 150ms ease;
+    }
+
+    &__button-line--middle {
+        margin-bottom: 6px;
+        margin-top: 6px;
+    }
+
+    &__buy-button {
+        display: none;
+        
+        @media screen and (min-width: 768px) {
+            display: block;
+            min-width: 160px;
+            height: 44px;
+
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.31;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            color: var(--title-color);
+            
+            background: #ffffff;
+            border: none;
+            border-radius: 22px;
+
+            transform: scale(1);
+            transition: color 250ms ease,
+                        background-color 250ms ease,
+                        transform 250ms ease;
+        }
+    }
+
+    &__btn-icon {
+        height: 10px;
+        margin-left: 12px;
+    }
+
+    &__buy-button:hover {
+        background-color: var(--title-color);
+        color: #ffffff;
+        transform: scale(1.002);
+
+        box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
+    }
+
+    &__buy-button:hover &__btn-icon {
+        display: none;
+    }
+}
+
+
+
+// ========================JS==========================
+.js-header-scroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    padding-top: 8px;
+    background-color: var(--accent-background-color);
+
+    z-index: 999;
+}
+
+.hidden-header {
+    display: none;
+}
+
+
+
+
+
+
