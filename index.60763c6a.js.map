@@ -1,0 +1,1 @@
+{"mappings":"AAAA,IAAIA,OAAO,eAAgB,CAEhBC,WAAG,CACVC,GAAI,qBAEJC,WAAW","sources":["src/index.js"],"sourcesContent":["new Swiper('.image-slide', {\n  // Пагінація\n  pagination: {\n    el: '.swiper-pagination',\n    // Булети\n    clickable: true,\n  },\n});\n"],"names":["Swiper","pagination","el","clickable"],"version":3,"file":"index.60763c6a.js.map"}
