@@ -75,7 +75,13 @@ p {
   @include mq(tablet) {
     min-height: 416px;
   }
+
+  @include mq(desktop) {
+    min-height: 664px;
+  }
 }
+
+// Title
 
 .title__thumb {
   position: absolute;
@@ -88,6 +94,12 @@ p {
     max-width: 162px;
     top: 102px;
     left: 32px;
+  }
+
+  @include mq(desktop) {
+    max-width: 277px;
+    top: 147px;
+    left: 16px;
   }
 }
 
@@ -105,6 +117,10 @@ p {
   @include mq(tablet) {
     font-size: 22px;
   }
+
+  @include mq(desktop) {
+    font-size: 38px;
+  }
 }
 
 .hero__accent {
@@ -120,7 +136,14 @@ p {
   @include mq(tablet) {
     font-size: 34px;
   }
+
+  @include mq(desktop) {
+    font-size: 58px;
+    line-height: 0.905;
+  }
 }
+
+// Links
 
 .hero__list {
   display: flex;
@@ -128,6 +151,17 @@ p {
 
 .hero__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.hero__item {
+  @include mq(desktop) {
+    &:nth-child(1) {
+      width: 107px;
+    }
+    &:nth-child(2) {
+      width: 138px;
+    }
+  }
 }
 
 .hero__link {
@@ -145,11 +179,11 @@ p {
   font-size: 8px;
   line-height: 1.25;
   text-decoration: none;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   background-color: var(--light-txt-color);
   color: var(--title-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transition: color 550ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 550ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -159,8 +193,20 @@ p {
     background-color: var(--title-color);
     color: var(--light-txt-color);
     transform: scale(115%);
+    box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
+  }
+
+  @include mq(desktop) {
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 1.29;
+
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
+
+// Text
 
 .hero__text {
   display: none;
@@ -173,6 +219,11 @@ p {
     font-size: 8px;
     color: var(--light-txt-color);
   }
+
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 .hero__text--accent {
@@ -183,12 +234,21 @@ p {
   font-size: 28px;
   color: var(--title-color);
   text-align: center;
+
+  @include mq(desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
 }
 
 .hero__text--about {
   line-height: 1.5;
   margin-bottom: 7px;
   text-align: left;
+
+  @include mq(desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .text__thumb--lg {
@@ -197,6 +257,12 @@ p {
   left: 184px;
   bottom: 56px;
   z-index: 3;
+
+  @include mq(desktop) {
+    width: 200px;
+    left: 229px;
+    bottom: 84px;
+  }
 }
 
 .text__thumb--sm {
@@ -217,11 +283,18 @@ p {
     position: absolute;
     right: 32px;
     top: 92px;
+
+    @include mq(desktop) {
+      right: 16px;
+    }
   }
 }
 
+// Button
+
 .hero__button {
   display: none;
+  padding: 0;
 
   @include mq(tablet) {
     display: flex;
@@ -235,7 +308,7 @@ p {
 
     background-color: var(--light-txt-color);
     color: var(--title-color);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     transition: color 550ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 550ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -245,15 +318,31 @@ p {
       background-color: var(--title-color);
       color: var(--light-txt-color);
       transform: scale(115%);
+      box-shadow: 0px 2px 2px rgb(212, 20, 67, 0.75);
     }
   }
+
+  @include mq(desktop) {
+    width: 26px;
+    height: 26px;
+  }
 }
+
+// Icon
 
 .hero__icon {
   display: inline-block;
   fill: currentColor;
-  height: 18px;
+  width: 8px;
+  height: 8px;
+
+  @include mq(desktop) {
+    width: 10px;
+    height: 10px;
+  }
 }
+
+// Pictures
 
 .hero__picture--primary {
   position: absolute;
@@ -263,6 +352,10 @@ p {
 
   @include mq(tablet) {
     right: 39%;
+  }
+
+  @include mq(desktop) {
+    right: 32%;
   }
 }
 
@@ -276,6 +369,10 @@ p {
     bottom: 0;
     z-index: 2;
   }
+
+  @include mq(desktop) {
+    right: 16px;
+  }
 }
 
 .hero__picture--milk {
@@ -287,7 +384,14 @@ p {
     left: 32px;
     bottom: 16px;
   }
+
+  @include mq(desktop) {
+    left: 16px;
+    bottom: 60px;
+  }
 }
+
+// Figures
 
 .circle {
   position: absolute;
@@ -305,6 +409,12 @@ p {
     right: 24%;
     bottom: 40px;
   }
+  @include mq(desktop) {
+    width: 534px;
+    height: 534px;
+    right: 18%;
+    bottom: 76px;
+  }
 }
 
 .circle--sm {
@@ -316,4 +426,11 @@ p {
   border-radius: 50%;
 
   background-color: var(--light-txt-color);
+
+  @include mq(desktop) {
+    width: 30px;
+    height: 30px;
+  }
 }
+
+
